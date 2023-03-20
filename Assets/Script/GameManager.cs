@@ -59,15 +59,26 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        /*if (score % 100 == 0 && speedObstancle <15 && spawnTime >=0.5 && score!=0)
+        ChangeSppedwithScore();
+    }
+    public void ChangeSppedwithScore()
+    {
+        if(score == 100)
         {
-            speedObstancle++;
-            spawnTime -= 0.1f;
-            //Debug.Log(score);
-                
-            
-            
-        }*/
+            speedObstancle = 4;
+            spawnTime = 1.9f;
+        }
+        if (score == 200)
+        {
+            speedObstancle = 6;
+            spawnTime = 1.2f;
+        }
+        if (score == 300)
+        {
+            speedObstancle = 8;
+            spawnTime = 0.9f;
+        }
+
     }
     public void RePlay()
     {
